@@ -467,7 +467,7 @@
           };
           default = nix;
         }
-        // pkgs.lib.optionalAttrs (!(builtins.elem system ["aarch64-darwin" "x86_64-darwin"])) {
+        // pkgs.lib.optionalAttrs (!(builtins.elem system ["x86_64-linux"])) {
         };
 
       devShells.default = pkgs.mkShell {nativeBuildInputs = [devPkg];};
@@ -478,7 +478,7 @@
           nix = nixPkg;
           maximal = maximalPkg;
         }
-        // pkgs.lib.optionalAttrs (!(builtins.elem system ["aarch64-darwin" "x86_64-darwin"])) {
+        // pkgs.lib.optionalAttrs (!(builtins.elem system ["x86_64-linux"])) {
         };
       defaultPackage = nixPkg;
     }));
